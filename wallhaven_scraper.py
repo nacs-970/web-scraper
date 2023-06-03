@@ -16,7 +16,7 @@ burl = 'https://wallhaven.cc/search?categories=110&purity=100&topRange=1M&sortin
 #burl = 'https://wallhaven.cc/search?categories=110&purity=001&topRange=1M&sorting=toplist&order=desc&ai_art_filter=1&page='
 
 # cookie login > f12 > network > headers
-cookie = 'cf_clearance=zxczeWqA5yvZbseTZJJKvT1UXAKhFak9gnQqux1QTWU-1683049107-0-250; remember_web_59ba36addc2b2f9401580f014c7f58ea4e30989d=eyJpdiI6IktISTRWVDlsemVlZ0JQRDRXRVZqeVE9PSIsInZhbHVlIjoiWGlpc1J4VnNEYzhubEVEeUk1THo1MUVvZ2hEMWwwVWgzNHpvRnk5V2M2Y3F4bTBKU0FzMVdPZEdpYmN3d1phSW5ZZ213S05CRkU0aytIQm14SzZwK1RUaUxOaENhbkRsMG5ZNnFuVHVNU3NHMnhvWCttZFFXbmpRdWZIQU9yU2t6YXlpM0xjWE54Y3JWckNGUHFKcUFpZkFWUlF4V3BEZmVXaUdaeXY4UlBRTHJFc1ZKRDZRMlZ0QUtHVUhIaGdJIiwibWFjIjoiODYwOGQ4ZGRlMzJjNDI3MWE1ZGFlNmEzODEzYjM2NzllNzc4MDQ1YzhkOGQwODdmMGVkYTc1OWYyMTg2YjRiOCJ9; XSRF-TOKEN=eyJpdiI6ImVpNlVmanN3XC91M2JtNXpCRnRKc2N3PT0iLCJ2YWx1ZSI6IndpODU0a28rZ1MrUXZrY1BSU3JlMkEzWFM2QzN3bG9JbFAwcGxTYmp0RkhkZ3VFMzhTSGd2VXZCY0YyRHdEZzYiLCJtYWMiOiJhY2EyMTllN2E1NDgyYTBiZDdiNDZlNTNjMGY2OGY2Y2FlODMzNjk4MjA3YjYxMWVhOTEzZWQ2N2Q2ZTc0NGQ4In0%3D; wallhaven_session=eyJpdiI6ImJScXpQQnByMUpoZGFsZEtOZFkzS1E9PSIsInZhbHVlIjoiSVhFUndsSjBPNFlNZFUzV2ZIUDhQRWhRbXB2bEpLV0VYNnRIXC9TdnNCRGFRb2ZRTWM0RFM1MzJMQ2ZOYkZ0UkgiLCJtYWMiOiI5ODhjNGQ1ZmY1YmM0ZjQzZjQ5YmYyZmIxMDZiMTkwYzE2NGNjMmQ2ZjM4NmFhYTIxZGM4MGYzNTUyZDg4YmNmIn0%3D'
+cookie = ''
 head = {'Cookie':cookie,'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36'}
 tsite = f'{burl}2'
 
