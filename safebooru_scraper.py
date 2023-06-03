@@ -48,7 +48,7 @@ while page <= maxpage:
         img = isoup.find(['a'],string = "Original image",href = re.compile('^https://safebooru.org//images/+')).get('href')
         
         id = url.split('=')[-1] # get image id
-        sid = img.split('/')[-1].split('.')[0][:5] # Get 5 first char
+        sid = img.split('/')[-1].split('.')[0][:6] # Get 6 first char
         fname = f"{id}-{sid}.{img.split('.')[2]}"
          
         print(f'Download {fname} from {img} to file')
