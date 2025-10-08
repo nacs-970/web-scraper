@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
 import requests
-import time
+from time import sleep
 import os
 import csv
 import random
@@ -19,6 +19,7 @@ if not os.path.exists(spath):
 if not os.path.isfile(csv_file):
     with open(csv_file,mode='w') as file:file.write("")
 
+# need to login
 #base url
 burl = 'https://www1.reg.cmu.ac.th/reg-stdsearch/index.php'
 
@@ -33,12 +34,12 @@ data = {"keysearch":id}
 #time.sleep(random.random()))
 
 #print(random.uniform(1,2))
-time.sleep(random.uniform(0,1.75))
+sleep(random.uniform(0,1.75))
 
 res = requests.post(burl,headers=head,data=data)
-
 bs = res.text
 soup = BeautifulSoup(bs,'html.parser')
+
 #print(soup)
 
 table = soup.find("tbody")
@@ -52,15 +53,16 @@ major = str(table[4]).split("<p class=\"text-th\">")
 degree = str(table[5]).split("<p class=\"text-th\">")
 
 # split en and th
+name_en = name[0][4:].strip().split()
+name_en = " ".join(name_en)
+name_th = name[1].replace("</p></td>","").strip().split()
+name_th = " ".join(name_th)
 faculty_en = faculty[0][4:]
 faculty_th = faculty[1].replace("</p></td>","")
-
 major_en = major[0][4:]
 major_th = major[1].replace("</p></td>","")
-
 degree_en = degree[0][4:]
 degree_th = degree[1].replace("</p></td>","")
-
 curriculum_type = str(table[6])[4:-5]
 
 if "F" not in gender[1]:
@@ -69,12 +71,6 @@ if "F" not in gender[1]:
 else:
     gender_en = "FEMALE"
     gender_th = "หญิง"
-
-name_en = name[0][4:].strip().split()
-name_en = " ".join(name_en)
-
-name_th = name[1].replace("</p></td>","").strip().split()
-name_th = " ".join(name_th)
 
 # en/th
 table2 = str(table[7]).split("\n")
@@ -105,6 +101,3 @@ else:
     print(f"major : {major2} | sub-major : {submajor}")
     print(f"adviser : {adviser}")
     print(f"admission : {admission}")
-
-#print("                                                                                                ".count(" "))
-#fpage = soup.find_all(class_="thumb-listing-page-header")[-1].find('h2')
